@@ -19,7 +19,7 @@ import (
 func main() {
     c := htmldoc.DefaultHTTPClient(htmldoc.UserAgentChrome)
     f := htmldoc.NewFetcher(c)
-    d := f.FetchDocument("http://example.com/") // HTTP GET only.
+    d, _ := f.FetchDocument("http://example.com/") // HTTP GET only.
 
     fmt.Println(d.Url.String())                 // You will get: http://example.com/
     fmt.Println(d.Find("title").Text())         // You will get: Example Domain
