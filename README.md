@@ -21,8 +21,8 @@ func main() {
     f := htmldoc.NewFetcher(c)
     d, _ := f.FetchDocument("http://example.com/") // HTTP GET only.
 
-    fmt.Println(d.Url.String())                 // You will get: http://example.com/
-    fmt.Println(d.Find("title").Text())         // You will get: Example Domain
+    fmt.Println(d.Url.String())         // You will get: http://example.com/
+    fmt.Println(d.Find("title").Text()) // You will get: Example Domain
 }
 ```
 
